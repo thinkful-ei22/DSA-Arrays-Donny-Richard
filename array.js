@@ -69,18 +69,27 @@ function main(){
   let arr = new Array();
 
   //add an item to the array
-//   arr.push(3);
-//   arr.push(5);
-//   arr.push(15);
-//   arr.push(19);
-//   arr.push(45);
-//   arr.push(10);
-//   arr.pop();
-//   arr.pop();
-//   arr.pop();
+  arr.push(3);
+  arr.push(5);
+  arr.push(15);
+  arr.push(19);
+  arr.push(45);
+  arr.push(10);
+  arr.pop();
+  arr.pop();
+  arr.pop();
 //   arr.push('tauhida');
   console.log('FIRST ITEM',arr.get(0));
   console.log(arr);
 }
 
 main();
+
+//1. 3 item push -  Array { length: 3, _capacity: 3, ptr: 0 }
+//pushed 3 items, capacity is set to three because of size ratio 3, pointer is initial positiion
+//2. 6 item push - Array { length: 6, _capacity: 12, ptr: 3 }
+//pushed 6 items, capacity is set to 12 resize, pointer is moved also
+//3. 6 item push - 3 item pop - Array { length: 3, _capacity: 12, ptr: 3 }
+// length is now 3, capacity and pointer remain same because no resize
+//4. pushing and retrieving a string such as 'tauhida' doesnt work beacuse our memory is a typed array for floating point numbers
+
